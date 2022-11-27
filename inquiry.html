@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ｜放課後等デイサービス アベブランコ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="./asset/css/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./asset/images/image/apple-touch-icon.png">
+    <meta name="keywords" content="アベブランコ,放課後等デイサービス,久留米,ave.blanco,福岡,放デイ">
+    <meta name="description" content="「いろんな自分色の羽で社会へはばたくサポートを」アベブランコは福岡県久留米市にある放課後等デイサービスです。">
+
+    <link rel="stylesheet" type="text/css" href="./asset/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./asset/css/slick.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./asset/css/slick-theme.css" media="screen">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="./asset/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="./asset/js/common.js"></script>
+    <script>
+        $(function() {
+            $('.menu').on('click', function() {
+                $(this).toggleClass('active');
+                $("#humnav").toggleClass('active');
+            })
+        })
+        $(function() {
+            $('#humnav a').on('click', function() {
+                $('#humnav').toggleClass('active');
+                $(".menu").toggleClass('active');
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <!-- メニュー -->
+    <div class="pc">
+        <div id="pc_nav">
+            <h1 id="pc_nav_logo">
+                <a href="index.html"><img src="./asset/image/top_logo.svg" alt="放課後等デイサービス アベブランコ"></a>
+            </h1>
+            <div id="pc_nav_wrap">
+                <a href="about.html">アベブランコとは</a>　　<a href="activity.html">活動案内</a>　　<a href="commute.html">利用案内</a>　　<a href="access.html">アクセス</a>　　<a href="recruit.html">採用・実習</a>
+            </div>
+            <div id="pc_nav_btn">
+                <a href="inquiry.html">お問い合わせ</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="sp_menu" class="sp">
+        <h1 id="sp_menu_logo">
+			<a href="index.html">
+	            <img src="./asset/image/top_logo.svg" alt="放課後等デイサービス アベブランコ">
+			</a>
+        </h1>
+        <div class="fullscreenmenu">
+            <div id="humnav">
+                <div class="spmenubtn_0"><a href="index.html"><img src="./asset/image/spmenu_logo.svg" alt="放課後等デイサービス アベブランコ"></a></div>
+                <div class="spmenubtn_1"><a href="about.html">アベブランコとは</a></div>
+                <div class="spmenubtn_1"><a href="activity.html">活動内容</a></div>
+                <div class="spmenubtn_1"><a href="commute.html">利用案内</a></div>
+                <div class="spmenubtn_1"><a href="access.html">アクセス</a></div>
+                <div class="spmenubtn_1"><a href="recruit.html">採用・実習</a></div>
+                <div class="spmenubtn_2"><a href="inquiry.html"><img src="./asset/image/spmenu_btn_inquiry.svg" alt="お問い合わせ"></a></div>
+            </div>
+        </div>
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- ヘッダー終わり -->
+
+    <!-- トップイメージ・ページ内メニュー -->
+    <div class="page_top_img">
+        <img src="./asset/image/inquiry_topimage_pc.jpg" alt="" class="pc">
+        <img src="./asset/image/inquiry_topimage_sp.jpg" alt="" class="sp">
+        <div class="page_top_nami">
+            <img src="./asset/image/top_slider_nami.svg" alt="">
+        </div>
+    </div>
+    <h2 class="page_title">
+        お問い合わせ
+    </h2>
+    <div class="inquiry_sub_menu">
+        アベブランコについての各種お問い合わせは<br class="sp">以下のフォームより承ります。<br>
+        お寄せいただいたお問い合わせは<br class="sp">各担当者より返信差し上げます。<br>
+        <span>※必須項目にはすべてご記入頂かないと送信頂けません。</span>
+    </div>
+
+    <!-- 理念 -->
+    <div class="inquiry_wrap">
+        <form id="contents_main" method="post" action="mail.php">
+            <table>
+                <tr>
+                    <td class="table_item">お名前 <span>必須</span></td>
+                    <td class="table_text"><input type="text" name="お名前" required></td>
+                </tr>
+                <tr>
+                    <td class="table_item">ふりがな <span>必須</span></td>
+                    <td class="table_text"><input type="text" name="ふりがな" required></td>
+                </tr>
+                <tr>
+                    <td class="table_item">Email <span>必須</span></td>
+                    <td class="table_text"><input type="text"  name="Email" required></td>
+                </tr>
+                <tr>
+                    <td class="table_item">電話番号</td>
+                    <td class="table_text"><input type="tel" name="電話番号"></td>
+                </tr>
+                <tr>
+                    <td class="table_item">お問い合わせ<br class="sp">件名</td>
+                    <td class="table_text">
+                        <select name="お問い合わせ件名">
+                            <option value="" selected hidden>▼こちらのプルダウンメニューから該当するものを選択してください</option>
+                            <option value="アベブランコへの通所に関するお問い合わせ・見学のお申し込み">アベブランコへの通所に関するお問い合わせ・見学のお申し込み</option>
+                            <option value="アベブランコへの採用に関するお問い合わせ・見学のお申し込み">採用に関するお問い合わせ・見学のお申し込み</option>
+                            <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_item">お問い合わせ<br class="sp">内容 <span>必須</span></td>
+                    <td class="table_text">
+                        <textarea name="お問い合わせ内容" rows="7" cols="45" required></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="entry_button">
+                <input class="button" type="submit" value="確認画面へ">
+            </div>
+        </form>
+    </div>
+
+    <!-- フッター -->
+    <div class="footer_outer">
+        <div class="footer_upside">
+            <div class="footer_upside_inner">
+                <div class="footer_upside_title fade_u">
+                    お問い合わせ
+                </div>
+                <div class="footer_upside_txt fade_u">
+                    ご相談・ご利用・ご見学に関するお問い合わせは、お電話もしくはメールフォームにてお気軽にご連絡ください。
+                </div>
+                <div class="footer_upside_btn">
+                    <div class="footer_upside_tel fade_u">
+                        <a href="tel:0942-27-5721">
+                            <img src="./asset/image/inquiry_btn_ph.svg" alt="0942-27-5721">
+                        </a>
+                    </div>
+                    <div class="footer_upside_mail fade_u">
+                        <a href="inquiry.html">
+                            <img src="./asset/image/inquiry_btn_mail.svg" alt="メールフォームからお問い合わせ">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_bird1 fade_r">
+                    <img src="./asset/image/brid__07.svg" alt="">
+                </div>
+                <div class="footer_bird2 fade_l">
+                    <img src="./asset/image/brid__06.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer_lowside">
+            <div class="footer_lowside_inner">
+                <div class="footer_lowside_box1">
+                    <a href="index.html"><img src="./asset/image/spmenu_logo.svg" alt="放課後等デイサービス アベブランコ"></a>
+                </div>
+                <div class="footer_lowside_box2">
+                    <a href="about.html"><span>アベブランコとは</span></a><br>
+                    <a href="about.html#mission">理念</a><br>
+                    <a href="about.html#vision">私たちが大切にしていること</a><br>
+                    <a href="about.html#skil">身につけていく３つのスキル</a><br>
+                    <a href="about.html#envi">アベブランコの環境</a><br>
+                    <a href="about.html#greeting">管理者挨拶</a>
+                </div>
+                <div class="footer_lowside_box3">
+                    <a href="activity.html"><span>活動内容</span></a><br>
+                    <a href="activity.html#program">療育プログラム</a><br>
+                    <a href="activity.html#training">その他トレーニング</a><br>
+                    <a href="activity.html#schedule">タイムスケジュール</a>
+                </div>
+                <div class="footer_lowside_box4">
+                    <a href="commute.html"><span>利用案内</span></a><br>
+                    <a href="commute.html#guide">利用案内</a><br>
+                    <a href="commute.html#time">利用時間</a><br>
+                    <a href="commute.html#process">入所案内</a><br>
+                    <a href="commute.html#area">サービスエリア</a>
+                </div>
+                <div class="footer_lowside_box5">
+                    <a href="access.html"><span>アクセス</span></a><br>
+                    <a href="access.html#profile">法人概要</a><br>
+                    <a href="access.html#map">アクセス</a>
+                </div>
+                <div class="footer_lowside_box6">
+                    <a href="recruit.html"><span>採用・実習</span></a><br>
+                    <a href="recruit.html#feature">特徴</a><br>
+                    <a href="recruit.html#flow">１日の仕事</a><br>
+                    <a href="recruit.html#interview">インタビュー</a><br>
+                    <a href="recruit.html#details">募集要項</a><br>
+                    <a href="recruit.html#intern">実習生について</a>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                Copyright ave.blanco 2022
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

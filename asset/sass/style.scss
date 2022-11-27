@@ -1,0 +1,2814 @@
+@charset "utf-8";
+
+/* Default */
+@import "_reset";
+
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+.pc_inline {
+    display: inline;
+}
+
+.sp_inline {
+    display: none;
+}
+
+
+
+body {
+    word-break: break-all;
+    font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+    color: #333;
+    background-color: #fffae9;
+}
+
+img {
+    width: 100%;
+}
+
+a[href^="tel:"] {
+    pointer-events: none;
+}
+
+/*-----------------------------------------------------*/
+// フェードイン
+/*-----------------------------------------------------*/
+
+.fade_u {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1000ms;
+}
+
+.fade_u.effect-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade_r {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 2000ms;
+}
+
+.fade_r.effect-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade_l {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 2000ms;
+}
+
+.fade_l.effect-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*-----------------------------------------------------*/
+// ヘッダー
+/*-----------------------------------------------------*/
+
+#pc_nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-sizing: border-box;
+    min-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+
+    #pc_nav_logo {
+        width: 240px;
+    }
+
+    #pc_nav_wrap {
+        font-size: 14px;
+        padding: 18px 25px;
+        background-color: #fff;
+        border-radius: 25px;
+        margin-left: 100px;
+
+        a {
+            color: #333;
+            font-weight: 500;
+        }
+    }
+
+    #pc_nav_btn {
+        font-size: 14px;
+        padding: 18px 25px;
+        background-color: #64d35c;
+        border-radius: 25px;
+
+        a {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// フッター
+/*-----------------------------------------------------*/
+
+.footer_outer {
+    width: 100%;
+    padding-top: 120px;
+
+    .footer_upside {
+        width: 100%;
+        padding-bottom: 80px;
+
+        .footer_upside_inner {
+            background-color: #4ac9a4;
+            border-radius: 20px;
+            width: 900px;
+            padding: 50px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+
+            .footer_upside_title {
+                color: #fff;
+                font-size: 32px;
+                font-weight: 500;
+                margin-bottom: 25px;
+            }
+
+            .footer_upside_txt {
+                color: #fff;
+                margin-bottom: 25px;
+            }
+
+            .footer_upside_btn {
+                margin: 0 auto;
+                width: 630px;
+                display: flex;
+                justify-content: space-between;
+
+                .footer_upside_tel,
+                .footer_upside_mail {
+                    width: 300px;
+                }
+            }
+
+            .footer_bird1 {
+                width: 84px;
+                position: absolute;
+                left: -15px;
+                top: -30px;
+            }
+
+            .footer_bird2 {
+                width: 80px;
+                position: absolute;
+                right: 30px;
+                bottom: -15px;
+            }
+        }
+    }
+
+    .footer_lowside {
+        width: 100%;
+        background-color: #64d35c;
+        padding-top: 50px;
+
+        .footer_copyright {
+            width: 100%;
+            text-align: center;
+            font-size: 10px;
+            color: #fff;
+            line-height: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .footer_lowside_inner {
+            width: 1000px;
+            margin: 0 auto 60px;
+            ;
+            display: flex;
+            justify-content: space-between;
+
+            .footer_lowside_box1 {
+                width: 180px;
+            }
+
+            .footer_lowside_box2 {
+                font-size: 12px;
+                line-height: 25px;
+                margin-left: 150px;
+
+                a {
+                    color: #fff;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .footer_lowside_box3 {
+                font-size: 12px;
+                line-height: 25px;
+
+                a {
+                    color: #fff;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .footer_lowside_box4 {
+                font-size: 12px;
+                line-height: 25px;
+
+                a {
+                    color: #fff;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .footer_lowside_box5 {
+                font-size: 12px;
+                line-height: 25px;
+
+                a {
+                    color: #fff;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .footer_lowside_box6 {
+                font-size: 12px;
+                line-height: 25px;
+
+                a {
+                    color: #fff;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// トップイメージ・ページ内メニュー
+/*-----------------------------------------------------*/
+.page_top_img {
+    width: 100%;
+    min-width: 1000px;
+    margin-top: 91px;
+    margin-bottom: 25px;
+    position: relative;
+
+    .page_top_nami {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
+}
+
+.page_title {
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    color: #64d35c;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.sub_menu {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 50px;
+
+    a {
+        color: #333;
+    }
+}
+
+.inquiry_sub_menu {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/*-----------------------------------------------------*/
+// トップページ：スライダー
+/*-----------------------------------------------------*/
+.top_slider_wrap {
+    position: relative;
+
+    .slick_01 {
+        width: 100%;
+        min-width: 1000px;
+
+        .top_slider_panel {
+            width: 100%;
+            position: relative;
+
+            .top_slider_ph {
+                width: 100%;
+            }
+        }
+    }
+
+    .top_slider_arrow {
+        display: inline-block;
+        position: absolute;
+        width: 70px;
+        bottom: 3%;
+        left: calc(50% - 35px);
+    }
+
+    .top_slider_msg {
+        display: inline-block;
+        position: absolute;
+        width: 270px;
+        bottom: 25%;
+        left: 12%;
+    }
+
+    .top_slider_nami {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        bottom: -2px;
+        left: 0;
+    }
+
+}
+
+/*-----------------------------------------------------*/
+// トップページ：メッセージ・放デイとは
+/*-----------------------------------------------------*/
+.top_msg {
+    margin: 80px 0 0;
+    position: relative;
+
+    .top_msg_inner {
+        width: 800px;
+        padding: 50px;
+        margin: 0 auto;
+        background-color: #fdf4be;
+        border-radius: 20px;
+        position: relative;
+        z-index: 100;
+
+        .top_msg_txt {
+            text-align: center;
+            line-height: 36px;
+            font-size: 16px;
+        }
+
+        .top_msg_b1 {
+            width: 90px;
+            position: absolute;
+            right: 20px;
+            top: -10px;
+        }
+
+        .top_msg_b2 {
+            width: 65px;
+            position: absolute;
+            right: -40px;
+            top: 150px;
+        }
+
+        .top_msg_b3 {
+            width: 85px;
+            position: absolute;
+            right: -10px;
+            bottom: 40px;
+        }
+
+        .top_msg_b4 {
+            width: 75px;
+            position: absolute;
+            left: 60px;
+            bottom: 100px;
+        }
+
+        .top_msg_b5 {
+            width: 80px;
+            position: absolute;
+            left: -40px;
+            top: 100px;
+        }
+
+        .top_msg_b6 {
+            width: 84px;
+            position: absolute;
+            left: -5px;
+            bottom: 10px;
+        }
+
+        .top_msg_b7 {
+            width: 70px;
+            position: absolute;
+            left: 40px;
+            top: 10px;
+        }
+
+        .top_hoday {
+            width: 400px;
+            margin: 0 auto 25px;
+        }
+    }
+
+    .top_msg_c1 {
+        width: 270px;
+        position: absolute;
+        left: -50px;
+        top: 10px;
+    }
+
+    .top_msg_c2 {
+        width: 120px;
+        position: absolute;
+        left: 8%;
+        bottom: 50px;
+    }
+
+    .top_msg_c3 {
+        width: 240px;
+        position: absolute;
+        right: 3%;
+        top: 50px;
+    }
+
+    .top_msg_c4 {
+        width: 150px;
+        position: absolute;
+        right: 15%;
+        bottom: 70px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// トップページ：アベブランコとは・利用案内
+/*-----------------------------------------------------*/
+.top_cnt_outer {
+    position: relative;
+    margin: 100px 0;
+
+    a {
+        display: block;
+        z-index: 101;
+        position: relative;
+
+        .top_cnt_wrap {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .top_cnt_img {
+                width: 500px;
+
+                img {
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    border: 4px solid #64d35c;
+                }
+            }
+
+            .top_cnt_box {
+                width: 450px;
+                padding-top: 50px;
+
+                .top_cnt_icon {
+                    width: 195px;
+                    margin-bottom: 15px
+                }
+
+                .top_cnt_title {
+                    color: #64d35c;
+                    font-size: 34px;
+                    font-weight: 500;
+                    margin-bottom: 8px
+                }
+
+                .top_cnt_txt {
+                    line-height: 32px;
+                    color: #333;
+                    margin-bottom: 25px
+                }
+
+                .top_cnt_btn {
+                    width: 140px;
+                    color: #fff;
+                    padding: 12px;
+                    border-radius: 40px;
+                    background-color: #b7e26e;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .top_cnt_c1 {
+        width: 500px;
+        position: absolute;
+        left: -250px;
+        top: 10px;
+    }
+
+    .top_cnt_c2 {
+        width: 200px;
+        position: absolute;
+        right: 50px;
+        bottom: 20px;
+    }
+
+    .top_cnt_c3 {
+        width: 300px;
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+    }
+
+    .top_cnt_b5 {
+        width: 60px;
+        position: absolute;
+        right: 80px;
+        bottom: 70px;
+    }
+
+    .top_cnt_b6 {
+        width: 50px;
+        position: absolute;
+        right: 50px;
+        bottom: 0px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// トップページ：活動内容・アクセス
+/*-----------------------------------------------------*/
+.top_cnt_outbox {
+    position: relative;
+    margin: 100px 0;
+
+    a {
+        display: block;
+        z-index: 101;
+        position: relative;
+
+        .top_cnt_wrap {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .top_cnt_img {
+                width: 500px;
+
+                img {
+                    box-sizing: border-box;
+                    width: 100%;
+                    border-radius: 20px;
+                    border: 4px solid #64d35c;
+                }
+            }
+
+            .top_cnt_box {
+                width: 450px;
+                padding-top: 50px;
+
+                .top_cnt_icon {
+                    width: 195px;
+                    margin-bottom: 15px
+                }
+
+                .top_cnt_title {
+                    color: #64d35c;
+                    font-size: 34px;
+                    font-weight: 500;
+                    margin-bottom: 8px
+                }
+
+                .top_cnt_txt {
+                    line-height: 32px;
+                    color: #333;
+                    margin-bottom: 25px
+                }
+
+                .top_cnt_btn {
+                    width: 140px;
+                    color: #fff;
+                    padding: 12px;
+                    border-radius: 40px;
+                    background-color: #b7e26e;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .top_cnt_c1 {
+        width: 250px;
+        position: absolute;
+        left: 50px;
+        bottom: 10px;
+    }
+
+    .top_cnt_c2 {
+        width: 400px;
+        position: absolute;
+        right: 0;
+        bottom: -120px;
+    }
+
+    .top_cnt_c3 {
+        width: 250px;
+        position: absolute;
+        left: 80px;
+        top: 30px;
+    }
+
+    .top_cnt_c4 {
+        width: 300px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+    }
+
+    .top_cnt_b2 {
+        width: 50px;
+        position: absolute;
+        left: 50px;
+        bottom: 0px;
+    }
+
+    .top_cnt_b7 {
+        width: 70px;
+        position: absolute;
+        left: 50px;
+        bottom: 0px;
+    }
+
+}
+
+/*-----------------------------------------------------*/
+// トップページ：ギャラリー
+/*-----------------------------------------------------*/
+.top_gallery_wrap {
+    position: relative;
+
+    .slick_01 {
+        width: 100%;
+        min-width: 1000px;
+
+        .top_slider_panel {
+            width: 18%;
+            margin-right: 2%;
+            position: relative;
+
+            .top_slider_ph {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+/*-----------------------------------------------------*/
+// アベブランコとは：理念
+/*-----------------------------------------------------*/
+
+.abt_mission_wrap {
+    width: 100%;
+    margin-bottom: 150px;
+
+    .abt_mission_inner {
+        width: 800px;
+        padding: 50px;
+        margin: 0 auto;
+        background-color: #fdf4be;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        z-index: 100;
+
+        .abt_mission_title {
+            color: #64d35c;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 49px;
+            margin-bottom: 20px;
+        }
+
+        .abt_mission_txt {
+            font-size: 16px;
+            line-height: 32px;
+        }
+
+        .abt_mission_01 {
+            width: 210px;
+            position: absolute;
+            right: -50px;
+            top: 40px;
+        }
+
+        .abt_mission_02 {
+            width: 210px;
+            position: absolute;
+            left: -50px;
+            top: -20px;
+        }
+
+        .abt_mission_03 {
+            width: 180px;
+            position: absolute;
+            left: -30px;
+            bottom: -20px;
+        }
+
+        .abt_mission_b1 {
+            width: 70px;
+            position: absolute;
+            right: 20px;
+            top: -10px;
+        }
+
+        .abt_mission_b2 {
+            width: 40px;
+            position: absolute;
+            left: 90px;
+            top: 150px;
+        }
+
+        .abt_mission_b3 {
+            width: 60px;
+            position: absolute;
+            right: 10px;
+            bottom: 30px;
+        }
+
+        .abt_mission_b4 {
+            width: 60px;
+            position: absolute;
+            right: 50px;
+            bottom: 120px;
+        }
+
+        .abt_mission_b5 {
+            width: 50px;
+            position: absolute;
+            left: 150px;
+            bottom: 10px;
+        }
+
+        .abt_mission_b6 {
+            width: 50px;
+            position: absolute;
+            left: 120px;
+            top: 5px;
+        }
+
+        .abt_mission_b7 {
+            width: 50px;
+            position: absolute;
+            left: -20px;
+            bottom: 130px;
+        }
+    }
+
+    .abt_mission_c2 {
+        width: 500px;
+        position: absolute;
+        right: 0;
+        bottom: -300px;
+    }
+
+}
+
+/*-----------------------------------------------------*/
+// アベブランコとは：私たちが大切にしていること。
+/*-----------------------------------------------------*/
+.abt_vision_wrap {
+    width: 720px;
+    margin: 0 auto 150px;
+    position: relative;
+
+    .abt_vision_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+
+        .abt_vision_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .abt_vision_inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .abt_vision_sub {
+            color: #64d35c;
+            font-size: 21px;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+            padding: 60px 0 30px;
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: #64d35c;
+            text-underline-offset: 10px;
+        }
+
+        .abt_vision_ph {
+            width: 47%;
+
+            img {
+                border-radius: 20px;
+            }
+        }
+
+        .abt_vision_txt {
+            width: 47%;
+            text-align: justify;
+            line-height: 24px;
+            z-index: 100;
+        }
+    }
+
+    .abt_vision_c1 {
+        position: absolute;
+        width: 200px;
+        left: -220px;
+        top: 350px;
+        z-index: 10;
+    }
+
+    .abt_vision_b2 {
+        position: absolute;
+        width: 60px;
+        left: -80px;
+        top: 200px;
+    }
+
+    .abt_vision_b4 {
+        position: absolute;
+        width: 60px;
+        left: -100px;
+        top: 270px;
+    }
+
+    .abt_vision_c2 {
+        position: absolute;
+        width: 240px;
+        right: -80px;
+        bottom: 80px;
+    }
+
+    .abt_vision_b1 {
+        position: absolute;
+        width: 40px;
+        right: -40px;
+        bottom: 220px;
+    }
+
+    .abt_vision_b6 {
+        position: absolute;
+        width: 60px;
+        right: -100px;
+        bottom: 260px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// アベブランコとは：身につけていく3つのスキル
+/*-----------------------------------------------------*/
+.abt_skil_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .abt_skil_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 25px;
+
+        .abt_skil_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .abt_skil_txt {
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .abt_skil_inner {
+        width: 880px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .abt_skil_box_1 {
+            width: 400px;
+            margin: 0 220px 50px;
+            box-sizing: border-box;
+            z-index: 100;
+
+            .abt_skil_ph {
+                img {
+                    border: 4px solid #ff7caf;
+                    border-radius: 20px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .abt_skil_ttl {
+                color: #fff;
+                background-color: #ff7caf;
+                width: 200px;
+                font-size: 21px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 20px;
+                margin: 0 auto 15px;
+            }
+
+            .abt_skil_copy {
+                text-align: justify;
+                line-height: 24px;
+            }
+        }
+
+        .abt_skil_box_2 {
+            width: 400px;
+            box-sizing: border-box;
+            z-index: 100;
+
+            .abt_skil_ph {
+                img {
+                    border: 4px solid #57bde8;
+                    border-radius: 20px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .abt_skil_ttl {
+                color: #fff;
+                background-color: #57bde8;
+                width: 200px;
+                font-size: 21px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 20px;
+                margin: 0 auto 15px;
+            }
+
+            .abt_skil_copy {
+                text-align: justify;
+                line-height: 24px;
+            }
+        }
+
+        .abt_skil_box_3 {
+            width: 400px;
+            box-sizing: border-box;
+            z-index: 100;
+
+            .abt_skil_ph {
+                img {
+                    border: 4px solid #ffa53a;
+                    border-radius: 20px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .abt_skil_ttl {
+                color: #fff;
+                background-color: #ffa53a;
+                width: 200px;
+                font-size: 21px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 20px;
+                margin: 0 auto 15px;
+            }
+
+            .abt_skil_copy {
+                text-align: justify;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .abt_skil_c1 {
+        position: absolute;
+        width: 300px;
+        top: 400px;
+        left: 50px
+    }
+
+    .abt_skil_c2 {
+        position: absolute;
+        width: 400px;
+        bottom: 350px;
+        right: 40px
+    }
+
+    .abt_skil_b5 {
+        position: absolute;
+        width: 60px;
+        top: 350px;
+        left: 50px
+    }
+
+    .abt_skil_b4 {
+        position: absolute;
+        width: 70px;
+        top: 500px;
+        left: 150px
+    }
+
+    .abt_skil_b3 {
+        position: absolute;
+        width: 70px;
+        bottom: 500px;
+        right: 150px
+    }
+}
+
+/*-----------------------------------------------------*/
+// アベブランコとは：アベブランコの環境
+/*-----------------------------------------------------*/
+.abt_envi_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .abt_envi_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 25px;
+
+        .abt_envi_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .abt_envi_txt {
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .abt_envi_ph_1 {
+        width: 1000px;
+        margin: 0 auto 50px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .abt_envi_ph_2 {
+        width: 900px;
+        margin: 0 auto 50px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .abt_envi_ph_3 {
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+    }
+
+    .abt_envi_c2 {
+        position: absolute;
+        width: 600px;
+        top: 350px;
+        right: 0;
+    }
+
+    .abt_envi_c3 {
+        position: absolute;
+        width: 400px;
+        bottom: 200px;
+        left: 0;
+    }
+
+    .abt_envi_c2 {
+        position: absolute;
+        width: 600px;
+        top: 350px;
+        right: 0;
+    }
+
+    .abt_envi_b1 {
+        position: absolute;
+        width: 60px;
+        top: 600px;
+        left: 80px;
+        z-index: 150;
+    }
+
+    .abt_envi_b5 {
+        position: absolute;
+        width: 70px;
+        bottom: 30px;
+        right: 100px;
+        z-index: 150;
+    }
+
+    .abt_envi_b7 {
+        position: absolute;
+        width: 60px;
+        bottom: 550px;
+        left: 200px;
+        z-index: 150;
+    }
+
+    .abt_envi_b2 {
+        position: absolute;
+        width: 50px;
+        bottom: 500px;
+        right: 150px;
+        z-index: 150;
+    }
+}
+
+/*-----------------------------------------------------*/
+// アベブランコとは：管理者挨拶
+/*-----------------------------------------------------*/
+.abt_greeting_wrap {
+    width: 100%;
+    position: relative;
+    background-color: #dff5dd;
+    padding: 100px 0;
+
+    .abt_greeting_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .abt_greeting_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .abt_greeting_nami {
+        position: absolute;
+        width: 100%;
+        top: -2px;
+        left: 0;
+    }
+
+    .abt_greeting_inner {
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .abt_greeting_ph {
+            width: 300px;
+
+            img {
+                border-radius: 20px;
+                box-shadow: 10px 10px 1px 0 #ce9;
+            }
+        }
+
+        .abt_greeting_box {
+            width: 450px;
+
+            .abt_greeting_copy {
+                font-size: 21px;
+                line-height: 30px;
+                margin-bottom: 25px;
+            }
+
+            .abt_greeting_txt {
+                text-align: justify;
+                line-height: 28px;
+                margin-bottom: 35px;
+            }
+
+            .abt_greeting_position {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .abt_greeting_name {
+                font-size: 21px;
+                margin-bottom: 10px;
+                letter-spacing: 0.25em;
+            }
+
+            .abt_greeting_alpha {
+                font-size: 14px;
+                letter-spacing: 0.16em;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// 活動内容：療育プログラム
+/*-----------------------------------------------------*/
+.act_program_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .act_program_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .act_program_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .act_program_inner-1 {
+        width: 940px;
+        margin: 0 auto 80px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        position: relative;
+        z-index: 100;
+
+        .act_program_ph {
+            width: 440px;
+
+            img {
+                border: 4px solid #64d35c;
+                border-radius: 20px;
+            }
+        }
+
+        .act_program_box {
+            width: 450px;
+
+            .act_program_ttl {
+                color: #64d35c;
+                font-size: 21px;
+                font-weight: 500;
+                line-height: 42px;
+            }
+
+            .act_program_txt {
+                text-align: justify;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .act_program_inner-2 {
+        width: 940px;
+        margin: 0 auto 130px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        position: relative;
+        z-index: 100;
+
+        .act_program_ph {
+            width: 440px;
+
+            img {
+                border: 4px solid #64d35c;
+                border-radius: 20px;
+            }
+        }
+
+        .act_program_box {
+            width: 450px;
+
+            .act_program_ttl {
+                color: #64d35c;
+                font-size: 21px;
+                font-weight: 500;
+                line-height: 42px;
+            }
+
+            .act_program_txt {
+                text-align: justify;
+                line-height: 28px;
+            }
+        }
+
+        .act_program_over {
+            position: absolute;
+            width: 270px;
+            bottom: -80px;
+            left: 380px;
+
+            img {
+                border: 4px solid #64d35c;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    .act_program_inner-3 {
+        width: 940px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        position: relative;
+        z-index: 100;
+
+        .act_program_ph {
+            width: 440px;
+
+            img {
+                border: 4px solid #64d35c;
+                border-radius: 20px;
+            }
+        }
+
+        .act_program_box {
+            width: 450px;
+
+            .act_program_ttl {
+                color: #64d35c;
+                font-size: 21px;
+                font-weight: 500;
+                line-height: 42px;
+            }
+
+            .act_program_txt {
+                text-align: justify;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 500px;
+        top: 100px;
+        right: 0;
+    }
+
+    .c2 {
+        position: absolute;
+        width: 500px;
+        top: 450px;
+        left: 0;
+    }
+
+    .b1 {
+        position: absolute;
+        width: 50px;
+        top: 350px;
+        left: 50px;
+    }
+
+    .b3 {
+        position: absolute;
+        width: 50px;
+        top: 420px;
+        left: 80px;
+    }
+
+    .b6 {
+        position: absolute;
+        width: 60px;
+        top: 700px;
+        right: 100px;
+    }
+
+    .b7 {
+        position: absolute;
+        width: 60px;
+        top: 800px;
+        right: 130px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// 活動内容：その他のトレーニング
+/*-----------------------------------------------------*/
+.act_training_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .act_training_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .act_training_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .act_training_inner {
+        width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .act_training_box {
+            width: 270px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 100;
+
+            .act_training_ph {
+                img {
+                    border-radius: 20px;
+                }
+            }
+
+            .act_training_ttl {
+                color: #64d35c;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 36px;
+            }
+
+            .act_training_txt {
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 500px;
+        top: 400px;
+        right: 0;
+    }
+
+    .c2 {
+        position: absolute;
+        width: 500px;
+        top: 900px;
+        left: 0;
+    }
+
+    .c3 {
+        position: absolute;
+        width: 250px;
+        top: 250px;
+        left: 50px;
+    }
+
+    .c4 {
+        position: absolute;
+        width: 350px;
+        top: 1300px;
+        right: 80px;
+    }
+
+    .c5 {
+        position: absolute;
+        width: 400px;
+        top: 1700px;
+        left: 100px;
+    }
+
+    .c6 {
+        position: absolute;
+        width: 400px;
+        bottom: -100px;
+        right: 0;
+    }
+}
+
+/*-----------------------------------------------------*/
+// 活動内容：タイムスケジュール 
+/*-----------------------------------------------------*/
+.act_schedule_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .act_schedule_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .act_schedule_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .act_schedule_inner {
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+
+        .act_schedule_1 {
+            padding-bottom: 80px;
+            border-bottom: 5px dotted #999999;
+        }
+
+        .act_schedule_2 {
+            padding-top: 80px;
+        }
+        
+        .act_schedule_caution {
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 300px;
+        top: 500px;
+        right: 0;
+    }
+
+    .c2 {
+        position: absolute;
+        width: 500px;
+        bottom: 100px;
+        left: 0;
+    }
+
+    .c3 {
+        position: absolute;
+        width: 350px;
+        top: 250px;
+        left: 50px;
+    }
+
+    .b1 {
+        position: absolute;
+        width: 50px;
+        top: 120px;
+        right: 100px;
+    }
+
+    .b2 {
+        position: absolute;
+        width: 50px;
+        top: 170px;
+        right: 200px;
+    }
+
+    .b3 {
+        position: absolute;
+        width: 50px;
+        top: 220px;
+        right: 150px;
+    }
+
+    .b4 {
+        position: absolute;
+        width: 50px;
+        bottom: 830px;
+        right: 120px;
+    }
+
+    .b5 {
+        position: absolute;
+        width: 50px;
+        bottom: 700px;
+        right: 70px;
+    }
+
+    .b6 {
+        position: absolute;
+        width: 50px;
+        bottom: 150px;
+        right: 160px;
+    }
+
+    .b7 {
+        position: absolute;
+        width: 50px;
+        bottom: 20px;
+        right: 50px;
+    }
+
+}
+
+/*-----------------------------------------------------*/
+// 採用・実習：実習生について
+/*-----------------------------------------------------*/
+.act_intern_wrap {
+    width: 100%;
+    position: relative;
+    background-color: #dff5dd;
+    padding: 100px 0;
+    margin-top: 150px;
+
+    .act_intern_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .act_intern_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .act_intern_nami {
+        position: absolute;
+        width: 100%;
+        top: -2px;
+        left: 0;
+    }
+
+    .act_intern_inner {
+        width: 720px;
+        margin: 0 auto;
+        text-align: center;
+
+        .act_intern_ttl {
+            font-size: 21px;
+            color: #64d35c;
+            font-weight: 500;
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: #64d35c;
+            text-underline-offset: 10px;
+            margin-bottom: 50px;
+        }
+
+        .act_intern_box {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .act_intern_ph {
+                width: 320px;
+
+                img {
+                    border-radius: 20px;
+                }
+            }
+
+            .act_intern_txt {
+                width: 350px;
+                text-align: justify;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// 利用案内：利用案内
+/*-----------------------------------------------------*/
+.com_guide_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .com_guide_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+        z-index: 100;
+
+        .com_guide_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .com_guide_inner {
+        width: 720px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+
+        .com_guide_box {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px dotted #999;
+            padding: 15px 0;
+
+            .com_guide_ttl {
+                width: 100px;
+            }
+
+            .com_guide_txt {
+                width: 600px;
+                line-height: 36px
+            }
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 500px;
+        top: -50px;
+        left: 0;
+    }
+
+    .c2 {
+        position: absolute;
+        width: 300px;
+        bottom: -50px;
+        right: 50px;
+    }
+
+    .b7 {
+        position: absolute;
+        width: 50px;
+        top: 100px;
+        right: 100px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// 利用案内：利用時間
+/*-----------------------------------------------------*/
+.com_time_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .com_time_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .com_time_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .com_time_inner {
+        width: 720px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .com_time_box1 {
+            width: 350px;
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+
+            span {
+                color: #64d35c;
+                font-weight: 500;
+            }
+        }
+
+        .com_time_box2 {
+            width: 100%;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// 利用案内：入所案内
+/*-----------------------------------------------------*/
+.com_process_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .com_process_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+        z-index: 100;
+
+        .com_process_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .com_process_inner {
+        width: 700px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 100;
+
+        .com_process_flow {
+            width: 230px;
+        }
+
+        .com_process_txt {
+            width: 420px;
+            text-align: justify;
+            line-height: 32px;
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 400px;
+        top: -120px;
+        right: 0;
+    }
+
+    .c2 {
+        position: absolute;
+        width: 300px;
+        bottom: -50px;
+        left: 30px;
+    }
+
+    .b6 {
+        position: absolute;
+        width: 50px;
+        bottom: -30px;
+        right: 100px;
+    }
+
+    .b2 {
+        position: absolute;
+        width: 50px;
+        bottom: -100px;
+        left: 400px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// 利用案内：サービスエリア
+/*-----------------------------------------------------*/
+.com_area_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .com_area_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .com_area_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .com_area_inner {
+        width: 1000px;
+        margin: 0 auto;
+
+        .com_area_txt {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 36px;
+            margin-bottom: 40px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+        }
+
+    }
+
+}
+
+/*-----------------------------------------------------*/
+// 採用情報：コンセプト
+/*-----------------------------------------------------*/
+.rec_concept_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .rec_concept_inner {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 100;
+
+        .rec_concept_title {
+            font-size: 28px;
+            color: #64d35c;
+            font-weight: 500;
+            line-height: 49px;
+            margin-bottom: 30px;
+        }
+
+        .rec_concept_txt {
+            line-height: 32px;
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 450px;
+        right: 0;
+        top: 0;
+    }
+
+    .b6 {
+        position: absolute;
+        width: 60px;
+        right: 100px;
+        top: 200px;
+    }
+
+    .b7 {
+        position: absolute;
+        width: 60px;
+        left: 100px;
+        bottom: 20px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// 採用情報：特徴
+/*-----------------------------------------------------*/
+.rec_feature_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .rec_feature_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+        position: relative;
+        z-index: 100;
+
+        .rec_feature_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .rec_feature_inner {
+        width: 720px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+
+        .rec_feature_ttl {
+            font-size: 21px;
+            color: #64d35c;
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: #64d35c;
+            text-underline-offset: 10px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .rec_feature_txt {
+            line-height: 32px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 450px;
+        left: 0;
+        top: 0;
+    }
+
+    .b5 {
+        position: absolute;
+        width: 60px;
+        left: 50px;
+        bottom: 50px;
+    }
+
+    .b1 {
+        position: absolute;
+        width: 60px;
+        right: 80px;
+        bottom: -50px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// 採用情報：１日の仕事
+/*-----------------------------------------------------*/
+.rec_flow_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .rec_flow_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .rec_flow_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .rec_flow_inner {
+        width: 960px;
+        margin: 0 auto;
+
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                background: url(../image/daily_line.svg) repeat-y center top;
+                padding: 5px 0;
+
+                .time {
+                    width: 12.5%;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    p {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #64d35c;
+                    }
+
+                    span {
+                        text-align: center;
+                        color: #fff;
+                        line-height: 1.2;
+                        font-weight: 700;
+                        font-size: 21px;
+                        letter-spacing: 0.05em;
+
+                        font {
+                            display: inline-block;
+                            writing-mode: vertical-rl;
+                        }
+                    }
+                }
+
+                .body {
+                    width: 40%;
+
+                    dl {
+                        dt {
+                            color: #64d35c;
+                            font-weight: 500;
+                            letter-spacing: 0.1em;
+                            margin-bottom: 5px;
+                            font-size: 24px;
+                        }
+
+                        dd {
+                            line-height: 1.7;
+                            text-align: justify;
+                        }
+                    }
+                }
+
+                .img {
+                    width: 40%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 20px;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    .time {
+                        order: 2;
+                    }
+
+                    .body {
+                        order: 3;
+                    }
+
+                    .img {
+                        order: 1;
+                    }
+                }
+
+                &:nth-child(even) {
+                    .time {
+                        order: 2;
+                    }
+
+                    .body {
+                        order: 1;
+
+                        dl {
+                            dt {
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    .img {
+                        order: 3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// 採用情報：インタビュー
+/*-----------------------------------------------------*/
+.rec_interview_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .rec_interview_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .rec_interview_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .rec_interview_inner {
+        width: 900px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+
+        .rec_interview_box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 4px dotted #ddd;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+
+            .rec_interview_ph {
+                width: 300px;
+
+                img {
+                    border-radius: 20px;
+                }
+            }
+
+            .rec_interview_txt {
+                width: 550px;
+                text-align: justify;
+                line-height: 1.75;
+
+                span {
+                    display: block;
+                    color: #64d35c;
+                    font-weight: 500;
+                    font-size: 21px;
+                    line-height: 42px;
+                }
+            }
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        widows: 300px;
+        top: 80px;
+        left: -50px;
+    }
+
+    .c2 {
+        position: absolute;
+        widows: 300px;
+        bottom: -100px;
+        right: 20px;
+    }
+
+    .b4 {
+        position: absolute;
+        width: 60px;
+        top: 300px;
+        left: 20px;
+    }
+
+    .b3 {
+        position: absolute;
+        width: 60px;
+        bottom: -60px;
+        right: 100px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// 採用情報：募集要項
+/*-----------------------------------------------------*/
+.rec_details_wrap {
+    width: 100%;
+    position: relative;
+
+    .rec_details_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .rec_details_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .rec_details_inner {
+        width: 1000px;
+        margin: 0 auto;
+
+        .rec_details_ttl {
+            color: #64d35c;
+            font-size: 21px;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: #64d35c;
+            text-underline-offset: 10px;
+            margin-bottom: 40px;
+        }
+
+        .rec_details_box {
+            table {
+                border-collapse: collapse;
+                width: 100%;
+
+                th {
+                    background: #64d35c;
+                    color: #fff;
+                    text-align: left;
+                    padding: 20px;
+                    border-bottom: 3px dotted #aaa;
+                    vertical-align: top;
+                }
+
+                td {
+                    background: #DFF5DD;
+                    text-align: left;
+                    padding: 20px;
+                    border-bottom: 3px dotted #aaa;
+                    vertical-align: top;
+                    line-height: 1.75;
+                }
+            }
+        }
+
+        .rec_details_mb {
+            margin-bottom: 180px;
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// アクセス：法人概要
+/*-----------------------------------------------------*/
+.acc_profile_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 150px;
+
+    .acc_profile_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .acc_profile_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .acc_profile_inner {
+        width: 800px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+
+        .acc_profile_box {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px dotted #999;
+            padding: 20px 0;
+
+            .acc_profile_ttl {
+                width: 120px;
+                color: #64d35c;
+                font-weight: 500;
+                line-height: 1.75;
+            }
+
+            .acc_profile_txt {
+                width: 630px;
+                line-height: 1.75;
+                a {
+                    color: #333;
+                }
+            }
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 500px;
+        right: 0;
+        top: 300px;
+    }
+
+    .c2 {
+        position: absolute;
+        width: 300px;
+        left: 50px;
+        bottom: 150px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// アクセス：アクセス
+/*-----------------------------------------------------*/
+.acc_map_wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 80px;
+
+    .acc_map_title {
+        color: #fff;
+        background: #64d35c;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 30px;
+        position: relative;
+        width: 720px;
+        margin: 0 auto 50px;
+
+        .acc_map_b3 {
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            right: 25px;
+        }
+    }
+
+    .acc_map_inner {
+        width: 1000px;
+        margin: 0 auto 50px;
+        position: relative;
+        z-index: 100;
+
+        iframe {
+            width: 1000px;
+            height: 600px;
+        }
+    }
+
+    .acc_map_box {
+        width: 660px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .acc_map_logo {
+            width: 250px;
+        }
+
+        .acc_map_txt {
+            width: 360px;
+            line-height: 35px;
+            padding-top: 10px;
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 400px;
+        left: 0;
+        top: 100px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// お問い合わせ：入力画面
+/*-----------------------------------------------------*/
+.inquiry_wrap {
+    width: 800px;
+    position: relative;
+    margin: 0 auto;
+
+    table {
+
+        .table_item {
+            width: 210px;
+            vertical-align: top;
+            padding-top: 6px;
+            padding-bottom: 50px;
+
+            span {
+                display: inline-block;
+                border: 1px solid #64d35c;
+                color: #64d35c;
+                font-size: 12px;
+                padding: 2px 10px;
+                border-radius: 10px;
+            }
+        }
+
+        .table_text {
+            width: 590px;
+
+            input {
+                width: 100%;
+                padding: 5px 10px;
+                box-sizing: border-box;
+            }
+
+            select {
+                width: 100%;
+                padding: 5px 10px;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                width: 100%;
+                padding: 5px 10px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .entry_button {
+        text-align: center;
+        padding-top: 50px;
+
+        input {
+            width: 200px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #64d35c;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            padding: 12px;
+            border-radius: 26px;
+            border: none;
+
+        }
+    }
+}
+
+/*-----------------------------------------------------*/
+// お問い合わせ：サンクス画面
+/*-----------------------------------------------------*/
+.inquiry_th_wrap {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+
+    .inquiry_th_txt {
+        font-size: 21px;
+        line-height: 2;
+        margin: 80px 0 50px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .inquiry_th_logo {
+        width: 250px;
+        margin: 0 auto 30px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .inquiry_th_link {
+        position: relative;
+        z-index: 100;
+
+        a {
+            color: #333;
+        }
+    }
+
+    .c1 {
+        position: absolute;
+        width: 300px;
+        top: -50px;
+        right: 0;
+    }
+
+    .c2 {
+        position: absolute;
+        width: 300px;
+        bottom: -50px;
+        left: 0;
+    }
+
+    .b1 {
+        position: absolute;
+        width: 60px;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    .b2 {
+        position: absolute;
+        width: 60px;
+        top: 150px;
+        left: 50px;
+    }
+
+    .b3 {
+        position: absolute;
+        width: 60px;
+        top: 0px;
+        left: 100px;
+    }
+}
+
+/*-----------------------------------------------------*/
+// お問い合わせ：送信内容確認画面
+/*-----------------------------------------------------*/
+#formWrap {
+    width: 800px;
+    margin: 150px auto 0;
+
+    h3 {
+        width: 100%;
+        font-size: 28px;
+        color: #64d35c;
+        font-weight: 500;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    form {
+        margin: 30px 0 0;
+
+        table {
+            margin-bottom: 50px;
+
+            th {
+                text-align: left;
+                padding: 15px;
+                color: #64d35c;
+                font-weight: 500;
+            }
+
+            td {
+                padding: 15px;
+            }
+        }
+
+        input {
+            width: 200px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #64d35c;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            padding: 12px;
+            border-radius: 26px;
+            border: none;
+        }
+
+        .btn_mr {
+            margin-right: 50px;
+        }
+    }
+}
+
+
+/*-----------------------------------------------------*/
+// Smartphone
+/*-----------------------------------------------------*/
+
+@media only screen and (max-width: 750px) {
+    @import "_sp";
+}
